@@ -1,34 +1,77 @@
 FORMAT: 1A
 HOST: https://polls.apiblueprint.org/
-# Tenders Page
-## Tenders [/tenders]
-### Current Tenders [GET]
+
+# IFN711
+            
+
+
+
+## Suppliers [/suppliers]
+
+### Current Suppliers [GET]
+
 + Response 200 
 
         [
-            {
-                [
+            {   [
                     {
-                        "TenderID": 1,
-                        "Title": "Buy steel poles",
-                        "Offer": "4000"
-                        "Buyer": "BHP"
+                        "ID": 1,
+                        "SupplierName": "Metal Supply Co"
+                        "Location": "Queensland"
+                        "ABN": "920 028 129"
+                        "Logo": "Metals"
                     }, {
-                        "TenderID": 2,
-                        "Title": "Buy steel poles",
-                        "Offer": "4500"
-                        "Buyer": "BHP"
+                        "ID": 2,
+                        "SupplierName": "Buzz Mechanics"
+                        "Location": "Queensland"
+                        "ABN": "920 027 129"
+                        "Logo": "Buzzs"
                     }, {
-                        "TenderID": 3,
-                        "Title": "Truck modifications",
-                        "Offer": "5000"
-                        "Buyer": "BMC"
+                        "ID": 3,
+                        "SupplierName": "Tools Today"
+                        "Location": "Western Australia"
+                        "ABN": "920 026 129"
+                        "Logo": "Tools"
                     }, {
-                        "TenderID": 4,
-                        "Title": "Truck modification",
-                        "Offer": "4500"
-                        "Buyer": "BMC"
+                        "ID": 4,
+                        "SupplierName": "COGS"
+                        "Location": "Victoria"
+                        "ABN": "920 025 129"
+                        "Logo": "COGSs"
                     }
                 ]
             }
         ]
+
+
+## Proposals [/proposals]
+
+### Current Proposals [GET]
+
++ Response 200 
+
+
+            {   [
+                    {
+                        "ProposalID": 1,
+                        "SupplierName": "Metal Supply Co"
+                        "OfferPrice": "5800.00",
+                        "TenderName": "Create metal sheets"
+                    }, {
+                        "ProposalID": 2,
+                        "SupplierName": "Buzz Mechanics"
+                        "OfferPrice": "6500.00",
+                        "TenderName": "Create metal sheets"
+                    }, {
+                        "ProposalID": 3,
+                        "SupplierName": "Tools Today"
+                        "OfferPrice": "6000.00",
+                        "TenderName": "Create metal sheets"
+                    }, {
+                        "ProposalID": 4,
+                        "SupplierName": "COGS"
+                        "OfferPrice": "6600.00",
+                        "TenderName": "Create metal sheets"
+                    }
+                ]
+            }
